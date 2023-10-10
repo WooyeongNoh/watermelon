@@ -3,11 +3,11 @@ let balls = [];
 
 
 function setup() {
-  createCanvas(200, 200); 
+  createCanvas(windowWidth, windowHeight); 
   
   
   for (let i=0; i<10; i++) {
-    let c = color(random(25, 25), 10, 255);
+    let c = color(random(25, 25), 10, 1);
     let x = new Walker(c, random([1, 2]));
     balls.push(x);
   }
@@ -17,7 +17,8 @@ function setup() {
 
 
 function draw() {
-  background(220, 10);
+  background(255, 8);
+  
 
   for (let b of balls) {
     b.update();
